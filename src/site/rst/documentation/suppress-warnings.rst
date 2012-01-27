@@ -34,23 +34,6 @@ Or you can suppress one rule with an annotation like this: ::
       }
   }
 
-The ``@SuppressWarnings`` annotation of PHPMD also supports some
-wildcard exclusion, so that you can suppress several warnings with
-a single annotation. ::
-
-  /**
-   * Suppress all rules containing "unused" in this
-   * class
-   */
-  class Bar {
-      private $_unusedPrivateField = 42;
-      public function foo($unusedFormalParameter = 23)
-      {
-          $unusedLocalVariable = 17;
-      }
-      private function _unusedPrivateMethod() {
-      }
-  }
 
 A doc comment can contain multiple ``@SuppressWarnings`` annotations,
 so that you can exclude multiple rules by name. ::
